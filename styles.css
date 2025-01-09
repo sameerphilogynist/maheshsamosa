@@ -13,6 +13,11 @@ body {
 .navbar {
     background-color: #2c2c2c; /* Grayish black */
     border-bottom: 2px solid #ffcc00; /* Gold border */
+    z-index: 9999; /* Ensures navbar is above other content */
+}
+
+.navbar-toggler {
+    border-color: #ffcc00; /* Make the button border color match the design */
 }
 
 .nav-link {
@@ -23,6 +28,13 @@ body {
 .nav-link:hover {
     color: #ffcc00; /* Gold hover */
 }
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center; /* Ensure the nav items are centered on mobile */
+    }
+    .nav-link {
+        padding: 10px 15px;
+    }
 
 .logo {
     max-height: auto;
