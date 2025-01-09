@@ -1,93 +1,97 @@
-/* Global Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    margin: 0;
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* Light text */
-}
-
-
-/* Navbar */
-.navbar {
-    background-color: #2c2c2c; /* Grayish black */
-    border-bottom: 2px solid #ffcc00; /* Gold border */
-    z-index: 9999; /* Ensures navbar is above other content */
-}
-
-.navbar-toggler {
-    border-color: #ffcc00; /* Make the button border color match the design */
-}
-
-.nav-link {
-    color: #ffffff;
-    font-weight: 600;
-}
-
-.nav-link:hover {
-    color: #ffcc00; /* Gold hover */
-}
-@media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center; /* Ensure the nav items are centered on mobile */
-    }
-    .nav-link {
-        padding: 10px 15px;
-    }
-
-.logo {
-    max-height: auto;
-    width: 400px;
-}
-
-/* Home Section */
-.home-section {
-    height: 50vh;  
-    background: linear-gradient(135deg, #000000, #333333);
-    color: #ffcc00;
-    text-align: center;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahesh Chhola Bhatura & Samosa Corner</title>
     
-}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <img src="Logo.png" alt="Mahesh Chhola Bhatura Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
+    <!-- Home Section -->
+    <section id="home" class="home-section text-center text-light d-flex flex-column justify-content-center">
+        <div class="container">
+            <h1>Welcome to Mahesh Chhola Bhatura & Samosa Corner</h1>
+            <p>स्वाद ऐसा जो याद रहे हमेशा</p>
+        </div>
+    </section>
 
-/* Menu Section */
-.menu-section {
-    background-color: #1c1c1c;
-    color: #ffcc00;
-    padding: 60px 20px;
-}
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section text-center">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <img src="chholabhatura.jpeg" alt="Chhola Bhatura" class="menu-img img-fluid">
+                    <p>Chhola Bhatura - ₹50</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="samosa.jpeg" alt="Samosa" class="menu-img img-fluid">
+                    <p>Samosa - ₹20</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.menu-img {
-    border: 4px solid #ffcc00;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-}
+    <!-- About Us Section -->
+    <section id="about" class="about-section text-center">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Serving delicious Chhola Bhatura & Samosas since 2001.</p>
+        </div>
+    </section>
 
-.menu-img:hover {
-    transform: scale(1.1);
-}
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section text-center">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Visit us at: Ragadganj Bazar, Belsar, Gonda, UP - 271401</p>
+            <p>Phone: +91 9838166502</p>
+        </div>
+    </section>
 
-/* About Section */
-.about-section {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 60px 20px;
-    border-top: 2px solid #ffcc00;
-}
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>&copy; 2025 Sameer Philogynist, IIT-Kanpur</p>
+    </footer>
 
-.about-section h2 {
-    color: #ffcc00;
-}
-
-/* Contact Section */
-.contact-section {
-    background-color: #1c1c1c;
-    color: #ffcc00;
-    padding: 60px 20px;
-}
-
-/* Footer */
-footer {
-    background-color: #000000;
-    color: #ffcc00;
-}
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Smooth Scroll -->
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>
