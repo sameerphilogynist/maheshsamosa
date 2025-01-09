@@ -2,7 +2,6 @@
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    padding-top: 80px;
     margin: 0;
     background-color: #121212; /* Dark background */
     color: #ffffff; /* Light text */
