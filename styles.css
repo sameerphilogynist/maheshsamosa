@@ -74,6 +74,16 @@ body {
     color: #ffcc00;
     padding: 60px 20px;
 }
+/*social media*/
+.social-links a {
+    text-decoration: none;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
 
 /* Footer */
 footer {
